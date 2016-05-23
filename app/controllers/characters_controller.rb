@@ -18,6 +18,8 @@ class CharactersController < ApplicationController
       end
     else
       render plain: "Not authorized", status: 401
+      # characters = Character.all
+      # render(json: characters)
     end
   end
 end
