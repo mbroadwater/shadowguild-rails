@@ -2,8 +2,12 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { sessions: 'sessions' }
 
-  resources :users, only: [:show, :index]
-  resources :characters, only: [:show, :index]
+  # devise_scope :user do
+  #   post '/users/sign_in', to: "sessions#create"
+  # end
+
+  # resources :users
+  resources :characters
   resources :defenses, only: [:show, :index]
   resources :base_skills, only: [:show, :index]
   resources :active_skills, only: [:show, :index]

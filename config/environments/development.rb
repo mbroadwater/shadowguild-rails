@@ -46,5 +46,6 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   ActiveModelSerializers.config.adapter = :json_api
+  # ActiveModelSerializers.config.adapter = :json
   ENV['SLACK_API_TOKEN'] = Rails.application.secrets.slack_api_token
 end
